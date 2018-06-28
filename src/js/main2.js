@@ -1,10 +1,10 @@
-d3.select("#treemap")
+d3.select("#heading")
     .append("h1")
     .attr("id","title")
     .text("Treemap Diagram")
 
 
-  d3.select("#treemap").insert("h2")
+  d3.select("#heading").insert("h2")
     .attr("id","description")
     .text("A D3 based treemap visualization")
 
@@ -17,9 +17,11 @@ var div = d3.select("body")
     .style("opacity", 0)
 
 var svg = d3.select("#treemap")
+    .attr("style","padding-bottom: " + Math.ceil(height * 90/width) + "%")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height)
+    // .attr("width", width)
+    // .attr("height", height)
+    .attr("viewBox", "0 0 " + width + " " + height);
 
 // tone down the colors with a fader function
 var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
@@ -103,9 +105,12 @@ categoryLegend()
     //  console.log(testRoot.children.map(x => color(x.data.name)));
   function categoryLegend() {
   // Draw the category legend
-  var legend = d3.select("#legend").append("svg")
-      .attr("width", width)
-      .attr("height", 80)
+  var legend = d3.select("#legend")
+    .attr("style","padding-bottom: " + Math.ceil(80 * 90/width) + "%")
+  .append("svg")
+    .attr("viewBox", "0 0 " + width + " " + 80)
+      // .attr("width", width)
+      // .attr("height", height)
   .selectAll(".legend")
       .data(testRoot.children.map(x => x.data.name))
     .enter().append("g")

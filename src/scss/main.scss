@@ -6,15 +6,71 @@ body {
   color: $color-text;
 }
 
+// svg {
+// //  width: 90%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: block;
+// }
 
 h1,h2 {
   text-align: center;
-
-}
-.foo {
-  @include absolute(0, 0, auto, auto);
 }
 
-.Tour {
-  display: flex;
+form {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+svg {
+  font: 10px sans-serif;
+}
+#treemap {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  /* padding-bottom will be overwritten by JavaScript later */
+  padding-bottom: 100%;
+}
+
+#treemap > svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+div#tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  padding: 2px;
+  font: 10px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#legend {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  /* padding-bottom will be overwritten by JavaScript later */
+  padding-bottom: 100%;
+}
+
+#legend > svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+div#legend {
+  margin: 20px;
 }

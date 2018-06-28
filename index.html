@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class="no-js"><
+<html dir="ltr" lang="en" class="no-js">
 <head>
   <title>Title</title>
   <meta charset="utf-8">
@@ -7,11 +7,16 @@
   <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
+  <div id="heading"></div>
+  <div id="treemap"></div>
+  <div id="legend"></div>
+  <form>
+  <label><input type="radio" name="mode" value="sumBySize" checked> Size</label>
+  <label><input type="radio" name="mode" value="sumByCount"> Count</label>
+</form>
 
-  <h1 id='test'>Npm Build Tool</h1>
-  <h2>Uses babel and prettier plus many more build tools to help you build a production ready web app.</h2>
-
-
-  <script src="dist/js/main.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="dist/js/main2.js"></script>
+  <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
 </body>
 </html>
