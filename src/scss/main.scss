@@ -2,16 +2,9 @@
 @import 'utilities';
 
 body {
-  background-color: $color-teal-base;
+  background-color: white;
   color: $color-text;
 }
-
-// svg {
-// //  width: 90%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   display: block;
-// }
 
 h1,h2 {
   text-align: center;
@@ -23,6 +16,7 @@ form {
 
 svg {
   font: 10px sans-serif;
+
 }
 #treemap {
   position: relative;
@@ -72,5 +66,5 @@ div#tooltip {
 }
 
 div#legend {
-  margin: 20px;
+  margin: 20px, auto, 20px;
 }
